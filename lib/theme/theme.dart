@@ -171,6 +171,7 @@ import 'package:shared_preferences/shared_preferences.dart';
           fontWhite: fontWhite ?? this.fontWhite,
         );
     }
+  @override
   MyColors lerp(ThemeExtension<MyColors>? other, double t) {
     if (other is! MyColors) {
       return this;
