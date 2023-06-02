@@ -360,7 +360,7 @@ import 'package:shared_preferences/shared_preferences.dart';
  }
 
 class AppTheme {
-  final _standartTheme = ThemeData.dark().copyWith(
+  final standartTheme = ThemeData.dark().copyWith(
     extensions: <ThemeExtension<dynamic>>[
       const MyColors.standart(),
       const MyTextStyles.defaultTextStyles(),
@@ -369,10 +369,9 @@ class AppTheme {
 
   final appThemeStream = BehaviorSubject<ThemeData>(sync: true);
 
-  //Add screen whe user can switch theme and watch on the value
   ThemeData getTheme() => appThemeStream.value;
 
   AppTheme() {
-    appThemeStream.add(_standartTheme);
+    appThemeStream.add(standartTheme);
   }
 }
