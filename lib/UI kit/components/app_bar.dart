@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_2/UI kit/theme/theme.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_project_2/UI kit/app_module.dart';
+import 'package:flutter_project_2/app_module.dart';
 class MyAppBar extends StatelessWidget {
-  const MyAppBar({
-    super.key,
-    required this.textTitle,
-    required this.textSubtitle,
-    required this.actionsEnable,
-    required this.toolBarEnable,
-});
+    const MyAppBar({
+      super.key,
+      required this.textTitle,
+      required this.textSubtitle,
+    });
   final String textTitle;
   final String textSubtitle;
-  final bool actionsEnable;
-  final bool toolBarEnable;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +25,8 @@ class MyAppBar extends StatelessWidget {
       ),
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(24),
-        child: Text(textSubtitle),)
+        child: Text(textSubtitle),),
+
 
     );
   }

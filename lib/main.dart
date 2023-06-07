@@ -1,19 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_2/UI kit/components/app_bar.dart';
-import 'package:flutter_project_2/UI kit/app_module.dart';
+import 'package:flutter_project_2/UI kit/theme/theme.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_project_2/UI%20kit/components/app_bar.dart';
+import 'package:flutter_project_2/app_module.dart';
+import 'package:flutter_project_2/pages/home.dart';
 
-void main(){
-  return runApp(HomePage());
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: MyAppBar(textTitle: 'TextNum1', textSubtitle: 'TextNum2', actionsEnable: true, toolBarEnable: false),
-    );
-  }
-}
-
+void main() => runApp(ModularApp(module: AppModule(), child: AppWidget(),));
